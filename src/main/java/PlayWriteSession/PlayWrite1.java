@@ -9,7 +9,6 @@ public class PlayWrite1 {
     public static void main(String[] args) {
        try ( Playwright playwright = Playwright.create()) {
 
-
            Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
            Page page = browser.newPage();
            page.navigate("https://amazon.com/");
@@ -19,9 +18,11 @@ public class PlayWrite1 {
            System.out.println(url);
            browser.close();
            playwright.close();
+
        }
        catch ( Exception e ) {
            e.printStackTrace();
        }
+
     }
 }
