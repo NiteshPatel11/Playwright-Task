@@ -109,7 +109,8 @@ public class HackerRank {
                 .setState(WaitForSelectorState.VISIBLE)
                 .setTimeout(5000));
                 
-            field.clear(); // Clear any existing value
+
+             // Clear any existing value
             field.fill(value);
             
             System.out.println("Successfully filled " + selector);
