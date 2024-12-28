@@ -16,7 +16,7 @@ public class FileUpload
 
             // Select the file input element and set the file path
             String filePath = "path/to/your/file.txt"; // Replace with the actual file path
-            page.setInputFiles("input#file-upload", filePath);
+           // page.setInputFiles("input#file-upload", filePath);
 
             // Click the upload button
             page.click("input#file-submit");
