@@ -22,10 +22,10 @@ public class FileUpload
             page.click("input#file-submit");
 
             // Wait for confirmation
-            page.waitForSelector("div#uploaded-files");
+            page.waitForSelector("div#upload-files", new Page.WaitForSelectorOptions().setTimeout(60000));
 
             // Verify file upload success
-            String uploadedFileName = page.locator("div#uploaded-files").textContent();
+            String uploadedFileName = page.locator("div#upload-files").textContent();
             if (uploadedFileName == null || !uploadedFileName.contains("file.txt")) {
                 throw new AssertionError("File upload failed! Expected 'file.txt' but got: " + uploadedFileName);
             }
