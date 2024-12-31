@@ -18,8 +18,7 @@ public class LotSize {
                     .setTimeout(5000));
             inputField.click();
 
-
-             page.waitForTimeout(20000);
+          page.waitForTimeout(20000);
 
         }
     }
